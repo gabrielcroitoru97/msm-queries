@@ -5,6 +5,7 @@ class DirectorsController < ApplicationController
 
   def show
     @the_id = params.fetch("the_id")
+    @the_director = Director.where({:id=>@the_id}).at(0)
     @the_name = Director.where({:id=>@the_id}).at(0).name
     @the_dob = Director.where({:id=>@the_id}).at(0).dob
     @the_bio = Director.where({:id=>@the_id}).at(0).bio
