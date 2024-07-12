@@ -1,0 +1,18 @@
+<h1>Director #<%= @the_id%> details</h1>
+<a href="/directors">Go back</a>
+<hr>
+<dt>Name</dt>
+<dd><%= @the_name%></dd>
+<dt>Dob</dt>
+<dd><%= @the_dob%></dd>
+<dt>Bio</dt>
+<dd><%= @the_bio%></dd>
+<dt>Image</dt>
+<dd><img src="<%= @the_image%>" style ="width: 250px"></dd>
+<dt>Created at</dt>
+<dd><%= @created%></dd>
+<dt>Updated at</dt>
+<dd><%= @updated%></dd>
+
+
+<% Movie.where({ :director_id => @the_id}) %>
